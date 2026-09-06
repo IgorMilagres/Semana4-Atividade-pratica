@@ -1,0 +1,346 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: rgb(172, 172, 172);
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 50px;
+    margin-bottom: 15px;
+
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    position: relative;
+}
+
+.logo img {
+    width: 125px;
+    height: 125px;
+
+    object-fit: cover;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.titulo h1 {
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.titulo p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.area-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 70px;
+}
+
+.pesquisa {
+    display: flex;
+
+    border: 1px solid #333;
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.pesquisa input {
+    width: 150px;
+
+    padding: 7px 12px;
+
+    border: none;
+    outline: none;
+}
+
+.pesquisa button {
+    padding: 7px 10px;
+
+    border: none;
+    background-color: white;
+
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    padding: 5px 18px;
+
+    border: 1px solid #333;
+
+    color: #333;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #eee;
+}
+
+.conteudo {
+    display: flex;
+    flex-wrap: wrap;
+
+    min-height: 520px;
+}
+
+.jogos {
+    width: 50%;
+
+    padding: 70px 60px;
+}
+
+.jogo-principal {
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.imagem-jogo img {
+    width: 245px;
+    height: 345px;
+
+    object-fit: cover;
+}
+
+.informacoes-jogo {
+    max-width: 270px;
+}
+
+.informacoes-jogo h2 {
+    margin-bottom: 20px;
+
+    font-size: 28px;
+}
+
+.informacoes-jogo p {
+    margin-bottom: 25px;
+
+    line-height: 1.4;
+}
+
+.conquistas {
+    margin-top: 50px;
+    margin-left: 305px;
+}
+
+.conquistas h2 {
+    margin-bottom: 15px;
+}
+
+.conquistas p {
+    line-height: 1.4;
+}
+
+.personagens {
+    width: 50%;
+
+    padding: 70px;
+
+    border-left: 2px solid #333;
+}
+
+.personagens h2 {
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.card {
+    width: 180px;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+
+    line-height: 1.3;
+}
+
+.lista-jogos {
+    width: 100%;
+
+    padding: 60px;
+
+    border-top: 1px solid #333;
+}
+
+.lista-jogos h2 {
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.jogos-grid {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.jogo-card {
+    width: 300px;
+
+    padding: 15px;
+
+    border: 1px solid #ccc;
+}
+
+.jogo-card img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+}
+
+.jogo-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.jogo-card p {
+    margin-bottom: 10px;
+
+    line-height: 1.4;
+}
+
+.rodape {
+    text-align: center;
+
+    padding: 30px;
+
+    border-top: 1px solid #333;
+}
+
+.rodape p {
+    margin: 5px;
+}
+
+@media (max-width: 1000px) {
+
+    .cabecalho {
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .area-direita {
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .jogos,
+    .personagens {
+        width: 100%;
+    }
+
+    .personagens {
+        border-left: none;
+        border-top: 2px solid #333;
+    }
+
+    .jogo-principal {
+        justify-content: center;
+    }
+
+    .conquistas {
+        margin-left: 0;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+
+    .jogos-grid {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .cabecalho {
+        padding: 20px;
+    }
+
+    .titulo h1 {
+        font-size: 36px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .jogos {
+        padding: 40px 20px;
+    }
+
+    .jogo-principal {
+        flex-direction: column;
+    }
+
+    .personagens {
+        padding: 40px 20px;
+    }
+
+    .lista-jogos {
+        padding: 40px 20px;
+    }
+
+    .jogo-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
